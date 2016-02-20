@@ -19,7 +19,9 @@ About
 =====
 
 Component interfaces are provided to allow a frictionless way to get started
-with physical computing::
+with physical computing:
+
+.. code-block:: python
 
     from gpiozero import LED
     from time import sleep
@@ -33,17 +35,19 @@ with physical computing::
         sleep(1)
 
 With very little code, you can quickly get going connecting your components
-together::
+together:
+
+.. code-block:: python
 
     from gpiozero import LED, Button
     from signal import pause
-
+    
     led = LED(17)
     button = Button(3)
-
+    
     button.when_pressed = led.on
     button.when_released = led.off
-
+    
     pause()
 
 The library includes interfaces to many simple everyday components, as well as
